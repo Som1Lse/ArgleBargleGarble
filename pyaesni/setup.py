@@ -1,13 +1,14 @@
-from distutils.core import setup
-from distutils.extension import Extension
+#!/usr/bin/env python3
+
+from setuptools import setup, Extension
 
 setup(
-    name='pyaesni',
+    name="pyaesni",
     ext_modules=[
         Extension(
-            name='pyaesni',
+            name="pyaesni",
             sources=[
-                'pyaesnimodule.cpp',
+                "pyaesnimodule.cpp",
             ],
         ),
     ],

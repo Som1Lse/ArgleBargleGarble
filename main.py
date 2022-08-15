@@ -984,6 +984,7 @@ class StandardAssumptionGrr2:
 
 # TODO: Related-key?
 
+
 def run_test(scheme: Any, f: Circuit, n: int):
     garble_times: list[float] = []
     eval_times: list[float] = []
@@ -1108,9 +1109,7 @@ def main():
         )
 
         for scheme in schemes.values():
-            gtime, etime = run_test(
-                scheme, f, args.iterations
-            )
+            gtime, etime = run_test(scheme, f, args.iterations)
 
             print(
                 f",{gtime:.6f},{etime:.6f}",
